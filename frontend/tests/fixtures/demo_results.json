@@ -1,0 +1,269 @@
+{
+  "meta": {
+    "id": "00000000-0000-0000-0000-000000000000",
+    "strategy_id": "ma_crossover",
+    "symbols": [
+      "SPY"
+    ],
+    "timeframe_requested": "1D",
+    "timeframe_used": "1D",
+    "start": "2024-01-01",
+    "end": "2024-01-20",
+    "adjusted": true,
+    "data_source": "Polygon/Massive Aggregates"
+  },
+  "config": {
+    "strategy_id": "ma_crossover",
+    "symbols": [
+      "SPY"
+    ],
+    "timeframe": "1D",
+    "start": "2024-01-01",
+    "end": "2024-01-20",
+    "adjusted": true,
+    "initial_capital": 10000,
+    "params": {
+      "fast": 3,
+      "slow": 6,
+      "sizing_mode": "fixed_notional",
+      "vol_lookback": 20,
+      "vol_target": 0.2,
+      "max_leverage": 1.5,
+      "stop_loss_pct": null
+    },
+    "costs": {
+      "fees_bps": 1.0,
+      "slippage_bps": 1.0,
+      "borrow_annual_pct": 0.0,
+      "funding_annual_pct": 0.0
+    }
+  },
+  "assumptions": {
+    "execution": "Signals computed on bar close; orders execute at next bar open (no lookahead).",
+    "fees": "Commission/fees: 1.00 bps per side.",
+    "slippage": "Slippage: 1.00 bps per side applied to next-open fills.",
+    "borrow": "Short borrow: 0.00% annualized applied to short notional over dt.",
+    "funding": "Funding: 0.00% annualized; pnl per dt = -notional * rate * dt_years.",
+    "adjusted_prices": "Adjusted prices ON (splits/dividends where supported).",
+    "missing_data": "No forward-fill. Gaps remain gaps; carry accrues over dt. Pairs use strict timestamp intersection only.",
+    "timezone": "Timestamps served as Unix ms (UTC). Note: equity aggregates are session-aligned; crypto is 24/7."
+  },
+  "bars": [
+    {
+      "symbol": "SPY",
+      "polygon": "SPY",
+      "bars": [
+        {
+          "t": 1704067200000,
+          "o": 470.0,
+          "h": 472.0,
+          "l": 468.5,
+          "c": 471.2,
+          "v": 1000000.0
+        },
+        {
+          "t": 1704153600000,
+          "o": 471.4,
+          "h": 474.0,
+          "l": 470.1,
+          "c": 473.8,
+          "v": 1100000.0
+        },
+        {
+          "t": 1704240000000,
+          "o": 473.9,
+          "h": 475.2,
+          "l": 471.8,
+          "c": 472.0,
+          "v": 1200000.0
+        },
+        {
+          "t": 1704326400000,
+          "o": 471.9,
+          "h": 473.5,
+          "l": 469.7,
+          "c": 470.4,
+          "v": 1300000.0
+        },
+        {
+          "t": 1704412800000,
+          "o": 470.2,
+          "h": 472.8,
+          "l": 468.9,
+          "c": 472.5,
+          "v": 1250000.0
+        },
+        {
+          "t": 1704499200000,
+          "o": 472.6,
+          "h": 476.3,
+          "l": 472.1,
+          "c": 475.9,
+          "v": 1400000.0
+        },
+        {
+          "t": 1704585600000,
+          "o": 476.0,
+          "h": 478.2,
+          "l": 474.8,
+          "c": 476.7,
+          "v": 1500000.0
+        }
+      ]
+    }
+  ],
+  "engine": {
+    "timestamps": [
+      1704067200000,
+      1704153600000,
+      1704240000000,
+      1704326400000,
+      1704412800000,
+      1704499200000,
+      1704585600000
+    ],
+    "equity": [
+      10000,
+      10010,
+      10005,
+      9950,
+      10150,
+      10300,
+      10250
+    ],
+    "drawdown": [
+      0,
+      0,
+      -0.0004995004995004271,
+      -0.006,
+      0,
+      0,
+      -0.0048543689320388345
+    ],
+    "returns": [
+      0,
+      0.001,
+      -0.0004995004995004271,
+      -0.005496251874062969,
+      0.020100502512562814,
+      0.014778325123152709,
+      -0.0048543689320388345
+    ],
+    "rolling_sharpe": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+    ],
+    "net_exposure": [
+      0,
+      0.98,
+      0.99,
+      0.0,
+      0.98,
+      0.99,
+      0.98
+    ],
+    "gross_exposure": [
+      0,
+      0.98,
+      0.99,
+      0.0,
+      0.98,
+      0.99,
+      0.98
+    ],
+    "turnover": [
+      0,
+      0.98,
+      0,
+      0.98,
+      0.98,
+      0,
+      0.2
+    ],
+    "positions": [
+      [
+        0,
+        20,
+        20,
+        0,
+        20,
+        20,
+        15
+      ]
+    ],
+    "indicators": {
+      "fast_ma": [
+        null,
+        null,
+        472.3333333333333,
+        472.06666666666666,
+        471.6333333333333,
+        472.9333333333333,
+        475.0333333333333
+      ],
+      "slow_ma": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        472.6333333333333,
+        473.55
+      ],
+      "close": [
+        471.2,
+        473.8,
+        472.0,
+        470.4,
+        472.5,
+        475.9,
+        476.7
+      ]
+    },
+    "trades": [
+      {
+        "id": 1,
+        "direction": "long",
+        "entry_time": 1704153600000,
+        "exit_time": 1704326400000,
+        "holding_period_bars": 2,
+        "legs": [
+          {
+            "symbol": "SPY",
+            "qty": 21.0,
+            "entry_price": 471.4,
+            "exit_price": 471.9,
+            "fees_paid": 1.0,
+            "slippage_cost": 1.0
+          }
+        ],
+        "pnl": 50.0,
+        "pnl_pct": 0.5,
+        "financing_pnl": 0.0
+      }
+    ],
+    "metrics": {
+      "start_equity": 10000.0,
+      "end_equity": 10250.0,
+      "total_return_pct": 2.5,
+      "cagr_pct": 0.0,
+      "vol_annual_pct": 0.0,
+      "sharpe": 0.0,
+      "max_drawdown_pct": -0.6,
+      "trades": 1,
+      "win_rate_pct": 100.0,
+      "profit_factor": 2.0,
+      "avg_hold_bars": 2.0,
+      "turnover_avg": 0.0
+    },
+    "diagnostics": {
+      "bars_per_year": 252,
+      "median_dt_seconds": 86400
+    }
+  }
+}

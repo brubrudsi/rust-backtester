@@ -1,0 +1,282 @@
+{
+  "version": 1,
+  "generated_at": "2026-01-04",
+  "intraday": {
+    "preferred": "auto",
+    "fallback": "5m"
+  },
+  "items": [
+    {
+      "id": "SPY",
+      "display": "SPY",
+      "name": "SPDR S&P 500 ETF Trust",
+      "asset_class": "etf",
+      "polygon": "SPY",
+      "supports_adjusted": true
+    },
+    {
+      "id": "QQQ",
+      "display": "QQQ",
+      "name": "Invesco QQQ Trust",
+      "asset_class": "etf",
+      "polygon": "QQQ",
+      "supports_adjusted": true
+    },
+    {
+      "id": "IWM",
+      "display": "IWM",
+      "name": "iShares Russell 2000 ETF",
+      "asset_class": "etf",
+      "polygon": "IWM",
+      "supports_adjusted": true
+    },
+    {
+      "id": "DIA",
+      "display": "DIA",
+      "name": "SPDR Dow Jones Industrial Average ETF",
+      "asset_class": "etf",
+      "polygon": "DIA",
+      "supports_adjusted": true
+    },
+    {
+      "id": "TLT",
+      "display": "TLT",
+      "name": "iShares 20+ Year Treasury Bond ETF",
+      "asset_class": "etf",
+      "polygon": "TLT",
+      "supports_adjusted": true
+    },
+    {
+      "id": "GLD",
+      "display": "GLD",
+      "name": "SPDR Gold Shares",
+      "asset_class": "etf",
+      "polygon": "GLD",
+      "supports_adjusted": true
+    },
+    {
+      "id": "SLV",
+      "display": "SLV",
+      "name": "iShares Silver Trust",
+      "asset_class": "etf",
+      "polygon": "SLV",
+      "supports_adjusted": true
+    },
+    {
+      "id": "XLF",
+      "display": "XLF",
+      "name": "Financial Select Sector SPDR Fund",
+      "asset_class": "etf",
+      "polygon": "XLF",
+      "supports_adjusted": true
+    },
+    {
+      "id": "XLK",
+      "display": "XLK",
+      "name": "Technology Select Sector SPDR Fund",
+      "asset_class": "etf",
+      "polygon": "XLK",
+      "supports_adjusted": true
+    },
+    {
+      "id": "AAPL",
+      "display": "AAPL",
+      "name": "Apple Inc.",
+      "asset_class": "equity",
+      "polygon": "AAPL",
+      "supports_adjusted": true
+    },
+    {
+      "id": "MSFT",
+      "display": "MSFT",
+      "name": "Microsoft Corp.",
+      "asset_class": "equity",
+      "polygon": "MSFT",
+      "supports_adjusted": true
+    },
+    {
+      "id": "AMZN",
+      "display": "AMZN",
+      "name": "Amazon.com Inc.",
+      "asset_class": "equity",
+      "polygon": "AMZN",
+      "supports_adjusted": true
+    },
+    {
+      "id": "GOOGL",
+      "display": "GOOGL",
+      "name": "Alphabet Inc. (A)",
+      "asset_class": "equity",
+      "polygon": "GOOGL",
+      "supports_adjusted": true
+    },
+    {
+      "id": "META",
+      "display": "META",
+      "name": "Meta Platforms Inc.",
+      "asset_class": "equity",
+      "polygon": "META",
+      "supports_adjusted": true
+    },
+    {
+      "id": "NVDA",
+      "display": "NVDA",
+      "name": "NVIDIA Corp.",
+      "asset_class": "equity",
+      "polygon": "NVDA",
+      "supports_adjusted": true
+    },
+    {
+      "id": "TSLA",
+      "display": "TSLA",
+      "name": "Tesla Inc.",
+      "asset_class": "equity",
+      "polygon": "TSLA",
+      "supports_adjusted": true
+    },
+    {
+      "id": "JPM",
+      "display": "JPM",
+      "name": "JPMorgan Chase & Co.",
+      "asset_class": "equity",
+      "polygon": "JPM",
+      "supports_adjusted": true
+    },
+    {
+      "id": "JNJ",
+      "display": "JNJ",
+      "name": "Johnson & Johnson",
+      "asset_class": "equity",
+      "polygon": "JNJ",
+      "supports_adjusted": true
+    },
+    {
+      "id": "XOM",
+      "display": "XOM",
+      "name": "Exxon Mobil Corp.",
+      "asset_class": "equity",
+      "polygon": "XOM",
+      "supports_adjusted": true
+    },
+    {
+      "id": "CVX",
+      "display": "CVX",
+      "name": "Chevron Corp.",
+      "asset_class": "equity",
+      "polygon": "CVX",
+      "supports_adjusted": true
+    },
+    {
+      "id": "V",
+      "display": "V",
+      "name": "Visa Inc.",
+      "asset_class": "equity",
+      "polygon": "V",
+      "supports_adjusted": true
+    },
+    {
+      "id": "MA",
+      "display": "MA",
+      "name": "Mastercard Inc.",
+      "asset_class": "equity",
+      "polygon": "MA",
+      "supports_adjusted": true
+    },
+    {
+      "id": "HD",
+      "display": "HD",
+      "name": "Home Depot Inc.",
+      "asset_class": "equity",
+      "polygon": "HD",
+      "supports_adjusted": true
+    },
+    {
+      "id": "PG",
+      "display": "PG",
+      "name": "Procter & Gamble Co.",
+      "asset_class": "equity",
+      "polygon": "PG",
+      "supports_adjusted": true
+    },
+    {
+      "id": "BTC-USD",
+      "display": "BTC/USD",
+      "name": "Bitcoin",
+      "asset_class": "crypto",
+      "polygon": "X:BTCUSD",
+      "supports_adjusted": false
+    },
+    {
+      "id": "ETH-USD",
+      "display": "ETH/USD",
+      "name": "Ethereum",
+      "asset_class": "crypto",
+      "polygon": "X:ETHUSD",
+      "supports_adjusted": false
+    },
+    {
+      "id": "SOL-USD",
+      "display": "SOL/USD",
+      "name": "Solana",
+      "asset_class": "crypto",
+      "polygon": "X:SOLUSD",
+      "supports_adjusted": false
+    },
+    {
+      "id": "ADA-USD",
+      "display": "ADA/USD",
+      "name": "Cardano",
+      "asset_class": "crypto",
+      "polygon": "X:ADAUSD",
+      "supports_adjusted": false
+    },
+    {
+      "id": "DOGE-USD",
+      "display": "DOGE/USD",
+      "name": "Dogecoin",
+      "asset_class": "crypto",
+      "polygon": "X:DOGEUSD",
+      "supports_adjusted": false
+    },
+    {
+      "id": "LTC-USD",
+      "display": "LTC/USD",
+      "name": "Litecoin",
+      "asset_class": "crypto",
+      "polygon": "X:LTCUSD",
+      "supports_adjusted": false
+    }
+  ],
+  "pairs": [
+    {
+      "id": "SPY/QQQ",
+      "a": "SPY",
+      "b": "QQQ",
+      "description": "Equity beta pair (large-cap vs tech)"
+    },
+    {
+      "id": "AAPL/MSFT",
+      "a": "AAPL",
+      "b": "MSFT",
+      "description": "Mega-cap tech pair"
+    },
+    {
+      "id": "XOM/CVX",
+      "a": "XOM",
+      "b": "CVX",
+      "description": "Energy majors pair"
+    },
+    {
+      "id": "GLD/SLV",
+      "a": "GLD",
+      "b": "SLV",
+      "description": "Precious metals pair"
+    },
+    {
+      "id": "BTC-USD/ETH-USD",
+      "a": "BTC-USD",
+      "b": "ETH-USD",
+      "description": "Major crypto pair"
+    }
+  ]
+}
