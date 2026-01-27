@@ -32,10 +32,13 @@ jobs:
       - uses: pnpm/action-setup@v4
         with:
           version: 9
+      - name: Configure pnpm store
+        run: pnpm config set store-dir ~/.pnpm-store && mkdir -p ~/.pnpm-store
       - uses: actions/setup-node@v4
         with:
           node-version: 20
           cache: 'pnpm'
+          cache-dependency-path: frontend/pnpm-lock.yaml
       - name: Install deps
         run: pnpm install --frozen-lockfile=false
       - name: Lint
