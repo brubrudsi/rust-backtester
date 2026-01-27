@@ -40,7 +40,7 @@ jobs:
         with:
           node-version: 20
           cache: 'pnpm'
-          cache-dependency-path: frontend/pnpm-lock.yaml
+          cache-dependency-path: ${{ github.workspace }}/frontend/pnpm-lock.yaml
       - name: Install deps
         run: pnpm install --frozen-lockfile=false
       - name: Lint
