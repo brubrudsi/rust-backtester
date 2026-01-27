@@ -34,10 +34,8 @@ jobs:
           version: 9
       - name: Configure pnpm store
         run: |
-          pnpm config set store-dir ~/.pnpm-store
-          store_path="$(pnpm store path --silent)"
-          echo "PNPM_STORE_PATH=$store_path" >> "$GITHUB_ENV"
-          mkdir -p "$store_path"
+          pnpm config set store-dir ~/.pnpm-store --location=global
+          mkdir -p ~/.pnpm-store ~/.pnpm-store/v3
       - uses: actions/setup-node@v4
         with:
           node-version: 20
