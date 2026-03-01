@@ -8,7 +8,7 @@ export default function HomePage() {
     <div className="space-y-8">
       <section className="space-y-3">
         <h1 className="text-3xl font-semibold tracking-tight">
-          Quant Web Backtester
+          Rust Backtester
         </h1>
         <p className="text-neutral-300 max-w-3xl">
           A chart-heavy backtesting webapp with a real Rust simulation engine

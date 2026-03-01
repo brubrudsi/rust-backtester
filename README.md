@@ -1,8 +1,8 @@
-# Quant Web Backtester (Rust Engine + Next.js UI)
+# Rust Backtester (Rust Engine + Next.js UI)
 
 A **chart-heavy, TradingView-ish** backtesting webapp designed as a **portfolio / hiring lever**:
 - <2 minutes: click **Run Demo Backtest** → full tear-sheet + overlays + trade markers.
-- <10 minutes: engineers see real infra/quant competence: Rust simulation, bias avoidance, caching, tests, CI, Docker.
+- <10 minutes: engineers see real infra/backtesting competence: Rust simulation, bias avoidance, caching, tests, CI, Docker.
 
 **Disclaimer:** For educational/demo purposes only. Not investment advice.
 
