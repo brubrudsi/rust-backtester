@@ -24,14 +24,6 @@ export default function HomePage() {
         </div>
         <StrategyCards compact />
       </section>
-
-      <Card className="p-5">
-        <div className="text-sm text-neutral-300">
-          <span className="font-medium text-neutral-100">Hiring-signal note:</span>{" "}
-          this repo optimizes for correctness + clarity over “feature sprawl”. No auth,
-          no uploads, no multi-tenant complexity.
-        </div>
-      </Card>
     </div>
   );
 }
