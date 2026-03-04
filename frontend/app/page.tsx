@@ -1,7 +1,6 @@
 import { CredibilityStrip } from "@/components/credibility-strip";
 import { StrategyCards } from "@/components/strategy-cards";
 import { RunDemoButtons } from "@/components/backtest/run-demo-buttons";
-import { Card } from "@/components/ui/card";
 
 export default function HomePage() {
   return (
@@ -27,14 +26,6 @@ export default function HomePage() {
         </div>
         <StrategyCards compact />
       </section>
-
-      <Card className="p-5">
-        <div className="text-sm text-neutral-300">
-          <span className="font-medium text-neutral-100">Hiring-signal note:</span>{" "}
-          this repo optimizes for correctness + clarity over “feature sprawl”. No auth,
-          no uploads, no multi-tenant complexity.
-        </div>
-      </Card>
     </div>
   );
 }
