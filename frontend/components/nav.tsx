@@ -1,5 +1,3 @@
-import { Badge } from "@/components/ui/badge";
-
 export function Nav() {
   return (
     <header className="flex items-center justify-between">
@@ -19,7 +17,6 @@ export function Nav() {
         <a href="/engineering" className="text-neutral-300 hover:text-neutral-50 no-underline">
           Engineering
         </a>
-        <Badge>MIT</Badge>
       </nav>
     </header>
   );
