@@ -24,9 +24,6 @@ export default function HomePage() {
       <section className="space-y-4">
         <div className="flex items-end justify-between">
           <h2 className="text-xl font-semibold">Strategy Gallery</h2>
-          <a href="/strategies" className="text-sm text-neutral-300 hover:text-neutral-50">
-            View full gallery →
-          </a>
         </div>
         <StrategyCards compact />
       </section>
