@@ -64,16 +64,6 @@ export default function EngineeringPage() {
           <li>Reproducible configs: stored with run results, copyable JSON.</li>
         </ul>
 
-        <Separator />
-
-        <h2 className="text-lg font-semibold">Local + VPS</h2>
-        <div className="text-neutral-300 text-sm space-y-2">
-          <p><code>docker compose up --build</code> runs web+api locally.</p>
-          <p>
-            For VPS TLS, use <code>docker-compose.prod.yml</code> + Caddy.
-            Set <code>DOMAIN</code> and <code>CADDY_EMAIL</code> in <code>.env</code>.
-          </p>
-        </div>
       </Card>
     </div>
   );
