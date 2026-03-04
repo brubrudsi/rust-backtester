@@ -1,6 +1,6 @@
 import { CredibilityStrip } from "@/components/credibility-strip";
 import { StrategyCards } from "@/components/strategy-cards";
-import { RunDemoButtons } from "@/components/backtest/run-demo-buttons";
+import { Card } from "@/components/ui/card";
 
 export default function HomePage() {
   return (
@@ -14,8 +14,6 @@ export default function HomePage() {
           (no lookahead, next-bar fills, costs, borrow/funding) — designed as a
           public GitHub portfolio repo.
         </p>
-
-        <RunDemoButtons />
       </section>
 
       <CredibilityStrip />
