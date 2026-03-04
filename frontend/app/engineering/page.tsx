@@ -8,34 +8,46 @@ export default function EngineeringPage() {
 
       <Card className="p-5 space-y-4">
         <h2 className="text-lg font-semibold">Architecture</h2>
-        <pre className="text-sm text-neutral-200 bg-neutral-900 p-4 rounded-md overflow-auto">
-{`Browser
-  |
-  |  Next.js (TypeScript) + Tailwind + minimal shadcn-style UI
-  |  - TradingView Lightweight Charts (candles + overlays + markers)
-  |  - Recharts (equity/drawdown/sharpe/hist/exposure)
-  |
-  v
-Rust API (axum)
-  - /api/universe
-  - /api/backtests (job runner)
-  - /api/backtests/{id}/results (stored JSON)
-  - Rate limiting, tracing logs
-  - Polygon/Massive data fetch + retries + disk cache
-  |
-  v
-Rust Engine (crate)
-  - Indicators
-  - Strategy signals (no lookahead)
-  - Next-bar execution
-  - Costs + borrow/funding carry
-  - Metrics + trades + series
-  |
-  v
-Disk (volume)
-  - cache/   (market data)
-  - runs/    (configs + results + status)`}
-        </pre>
+        <div className="text-sm text-neutral-200 bg-neutral-900 p-4 rounded-md space-y-4">
+          <section className="space-y-1">
+            <h3 className="font-semibold text-neutral-100">1) Frontend (browser)</h3>
+            <p>Next.js (TypeScript) + Tailwind + minimal shadcn-style UI.</p>
+            <ul className="list-disc pl-5 text-neutral-300 space-y-0.5">
+              <li>TradingView Lightweight Charts for candles, overlays, and markers.</li>
+              <li>Recharts for equity, drawdown, Sharpe, histogram, and exposure views.</li>
+            </ul>
+          </section>
+
+          <section className="space-y-1">
+            <h3 className="font-semibold text-neutral-100">2) Rust API (axum)</h3>
+            <ul className="list-disc pl-5 text-neutral-300 space-y-0.5">
+              <li><code>/api/universe</code></li>
+              <li><code>/api/backtests</code> (job runner)</li>
+              <li><code>/api/backtests/{`{id}`}/results</code> (stored JSON)</li>
+              <li>Rate limiting and tracing logs.</li>
+              <li>Polygon/Massive data fetch with retries and disk cache.</li>
+            </ul>
+          </section>
+
+          <section className="space-y-1">
+            <h3 className="font-semibold text-neutral-100">3) Rust engine crate</h3>
+            <ul className="list-disc pl-5 text-neutral-300 space-y-0.5">
+              <li>Indicators.</li>
+              <li>Strategy signals (no lookahead).</li>
+              <li>Next-bar execution.</li>
+              <li>Costs plus borrow/funding carry.</li>
+              <li>Metrics, trades, and series output.</li>
+            </ul>
+          </section>
+
+          <section className="space-y-1">
+            <h3 className="font-semibold text-neutral-100">4) Disk volume</h3>
+            <ul className="list-disc pl-5 text-neutral-300 space-y-0.5">
+              <li><code>cache/</code> for market data.</li>
+              <li><code>runs/</code> for configs, results, and status.</li>
+            </ul>
+          </section>
+        </div>
 
         <Separator />
 
