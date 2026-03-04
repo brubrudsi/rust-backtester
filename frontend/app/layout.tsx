@@ -14,9 +14,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <div className="mx-auto max-w-7xl px-4 py-6">
           <Nav />
           <main className="mt-6">{children}</main>
-          <footer className="mt-12 border-t border-neutral-800 pt-6 text-sm text-neutral-400">
-            For educational/demo purposes only — not investment advice.
-          </footer>
         </div>
       </body>
     </html>
