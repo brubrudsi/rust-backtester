@@ -111,7 +111,6 @@ export function RunForm({
             <Select value={timeframe} onChange={(e) => setTimeframe(e.target.value)}>
               <option value="1D">1D</option>
               <option value="1H">1H</option>
-              <option value="1m">1m (may require plan)</option>
               <option value="5m">5m</option>
             </Select>
           </div>
