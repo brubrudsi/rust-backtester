@@ -55,7 +55,7 @@ export default function EngineeringPage() {
         <ul className="list-disc pl-5 text-neutral-300 space-y-1">
           <li>No lookahead: signals are based on bar-close data only.</li>
           <li>Next-bar execution: orders fill at next bar open (with slippage).</li>
-          <li>Adjusted prices toggle (equities) with clear UI explanation.</li>
+          <li>Adjusted prices toggle (equities).</li>
           <li>Transaction costs + slippage (bps per side) always applied.</li>
           <li>Short borrow and funding carry modeled (annualized, dt-aware).</li>
           <li>Time alignment: UTC timestamps; pairs use strict timestamp intersection.</li>
