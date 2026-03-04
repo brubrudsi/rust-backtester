@@ -19,7 +19,7 @@ impl PolygonProvider {
     pub fn new(api_key: String, base_url: String, cache: FileCache) -> anyhow::Result<Self> {
         let client = reqwest::Client::builder()
             .timeout(Duration::from_secs(30))
-            .user_agent("quant-web-backtester/0.1")
+            .user_agent("rust-backtester/0.1")
             .build()?;
         Ok(Self { client, api_key, base_url, cache })
     }

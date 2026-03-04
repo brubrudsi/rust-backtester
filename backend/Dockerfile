@@ -1,7 +1,7 @@
 # NOTE: The API depends on crates (e.g. ICU via `url`/`reqwest`) that require
 # a newer compiler than 1.78. Pin to a modern, widely-available Rust release
 # so Docker builds are reproducible.
-FROM rust:1.83-slim AS builder
+FROM rust:1.85-slim AS builder
 
 WORKDIR /app
 

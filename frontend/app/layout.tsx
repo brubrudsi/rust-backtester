@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import { Nav } from "@/components/nav";
 
 export const metadata: Metadata = {
-  title: "Quant Web Backtester",
+  title: "Rust Backtester",
   description: "Rust backtesting engine + Next.js chart-heavy UI (portfolio demo).",
 };
 
