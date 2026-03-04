@@ -16,9 +16,6 @@ export function Nav() {
       </a>
 
       <nav className="flex items-center gap-4 text-sm">
-        <a href="/strategies" className="text-neutral-300 hover:text-neutral-50 no-underline">
-          Strategies
-        </a>
         <a href="/engineering" className="text-neutral-300 hover:text-neutral-50 no-underline">
           Engineering
         </a>
