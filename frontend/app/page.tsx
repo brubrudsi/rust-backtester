@@ -10,9 +10,8 @@ export default function HomePage() {
           Rust Backtester
         </h1>
         <p className="text-neutral-300 max-w-3xl">
-          A chart-heavy backtesting webapp with a real Rust simulation engine
-          (no lookahead, next-bar fills, costs, borrow/funding) — designed as a
-          public GitHub portfolio repo.
+          A chart-forward backtesting webapp with a robust Rust simulation engine
+          (no lookahead, next-bar fills, costs, borrow/funding).
         </p>
       </section>
 
