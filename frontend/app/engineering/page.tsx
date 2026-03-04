@@ -10,9 +10,9 @@ export default function EngineeringPage() {
         <h2 className="text-lg font-semibold">Architecture</h2>
         <div className="text-sm text-neutral-200 bg-neutral-900 p-4 rounded-md space-y-4">
           <section className="space-y-1">
-            <h3 className="font-semibold text-neutral-100">1) Frontend (browser)</h3>
-            <p>Next.js (TypeScript) + Tailwind + minimal shadcn-style UI.</p>
+            <h3 className="font-semibold text-neutral-100">1) Frontend</h3>
             <ul className="list-disc pl-5 text-neutral-300 space-y-0.5">
+              <li>Next.js (TypeScript) + Tailwind + minimal shadcn-style UI.</li>
               <li>TradingView Lightweight Charts for candles, overlays, and markers.</li>
               <li>Recharts for equity, drawdown, Sharpe, histogram, and exposure views.</li>
             </ul>
