@@ -8,7 +8,6 @@ const items = [
   "Borrow/funding carry",
   "Adjusted prices toggle",
   "Reproducible configs",
-  "Tests + CI",
   "Rust engine",
 ];
 
