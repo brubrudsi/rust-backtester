@@ -2,28 +2,45 @@
 
 import { useMemo, useState } from "react";
 import type { Trade } from "@/lib/types";
-import { Input } from "@/components/ui/input";
 import { Table, TBody, TD, TH, THead, TR } from "@/components/ui/table";
 
 export function TradeBlotter({ trades }: { trades: Trade[] }) {
-  const [q, setQ] = useState("");
+  const [showLong, setShowLong] = useState(true);
+  const [showShort, setShowShort] = useState(true);
 
   const filtered = useMemo(() => {
-    if (!q.trim()) return trades;
-    const needle = q.toLowerCase();
-    return trades.filter((t) => t.direction.toLowerCase().includes(needle));
-  }, [q, trades]);
+    return trades.filter((t) => {
+      const dir = t.direction.toLowerCase();
+      if (dir === "long") return showLong;
+      if (dir === "short") return showShort;
+      return true;
+    });
+  }, [showLong, showShort, trades]);
 
   return (
     <div className="space-y-3">
       <div className="flex items-center justify-between gap-3">
         <div className="text-sm font-semibold">Trade blotter</div>
-        <Input
-          className="max-w-xs"
-          placeholder="filter by direction…"
-          value={q}
-          onChange={(e) => setQ(e.target.value)}
-        />
+        <div className="flex items-center gap-4">
+          <label className="flex items-center gap-1.5 text-sm cursor-pointer select-none">
+            <input
+              type="checkbox"
+              checked={showLong}
+              onChange={(e) => setShowLong(e.target.checked)}
+              className="accent-emerald-500"
+            />
+            Long
+          </label>
+          <label className="flex items-center gap-1.5 text-sm cursor-pointer select-none">
+            <input
+              type="checkbox"
+              checked={showShort}
+              onChange={(e) => setShowShort(e.target.checked)}
+              className="accent-rose-500"
+            />
+            Short
+          </label>
+        </div>
       </div>
 
       <div className="text-xs text-neutral-400">
