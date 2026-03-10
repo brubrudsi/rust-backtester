@@ -20,8 +20,8 @@ const strategies: StrategyCard[] = [
     title: "A) Trend — MA Crossover",
     desc: "Classic trend-following: fast MA vs slow MA.",
     defaults: {
-      fast: 20,
-      slow: 100,
+      fast: 10,
+      slow: 40,
       sizing_mode: "fixed_notional",
       vol_lookback: 20,
       vol_target: 0.2,
@@ -53,27 +53,49 @@ export function StrategyCards({ compact }: { compact: boolean }) {
   const [open, setOpen] = useState(false);
   const [selected, setSelected] = useState<StrategyCard | null>(null);
 
-  const grid = compact ? "grid md:grid-cols-2 gap-4" : "grid lg:grid-cols-2 gap-4";
+  const grid = compact
+    ? "grid md:grid-cols-2 md:grid-rows-2 gap-6 flex-1 min-h-0 auto-rows-1fr"
+    : "grid lg:grid-cols-2 gap-6";
 
   return (
     <>
-      <div className={grid}>
-        {strategies.map((s) => (
-          <Card key={s.id} className="p-5 space-y-3">
-            <div className="text-lg font-semibold">{s.title}</div>
-            <div className="text-neutral-300 text-sm">{s.desc}</div>
-            <div>
-              <Button
-                onClick={() => {
-                  setSelected(s);
-                  setOpen(true);
-                }}
+      <div className={compact ? "flex-1 min-h-0 flex flex-col" : ""}>
+        <div className={grid}>
+          {strategies.map((s) => (
+            <Card
+              key={s.id}
+              className={
+                compact
+                  ? "p-6 md:p-8 flex flex-col min-h-[200px] md:min-h-0"
+                  : "p-5 space-y-3"
+              }
+            >
+              <div className={compact ? "text-xl font-semibold text-neutral-50" : "text-lg font-semibold"}>
+                {s.title}
+              </div>
+              <div
+                className={
+                  compact
+                    ? "text-neutral-300 text-base leading-relaxed flex-1"
+                    : "text-neutral-300 text-sm"
+                }
               >
-                Configure & Run
-              </Button>
-            </div>
-          </Card>
-        ))}
+                {s.desc}
+              </div>
+              <div className={compact ? "mt-4 pt-2" : ""}>
+                <Button
+                  className={compact ? "px-5 py-2.5 text-base" : ""}
+                  onClick={() => {
+                    setSelected(s);
+                    setOpen(true);
+                  }}
+                >
+                  Configure & Run
+                </Button>
+              </div>
+            </Card>
+          ))}
+        </div>
       </div>
 
       <Dialog open={open} onOpenChange={setOpen}>

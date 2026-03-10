@@ -59,7 +59,7 @@ export function ReturnsHistogram({ returns }: { returns: number[] }) {
         </ResponsiveContainer>
       </div>
       <div className="text-xs text-neutral-400">
-        Histogram of simple returns (equity[i]/equity[i-1]-1).
+        Simple returns (equity[i]/equity[i-1]-1).
       </div>
     </div>
   );

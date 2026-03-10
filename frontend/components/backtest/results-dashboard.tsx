@@ -54,7 +54,7 @@ export function ResultsDashboard({ results }: { results: BacktestResults }) {
           />
         ) : (
           <TvCandles
-            title="Price (TradingView Lightweight Charts)"
+            title="TradingView Lightweight Charts"
             bars={bars[0].bars}
             overlays={engine.indicators}
             markersFromTrades={engine.trades}

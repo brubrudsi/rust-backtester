@@ -46,7 +46,7 @@
     "funding": "Funding: 0.00% annualized; pnl per dt = -notional * rate * dt_years.",
     "adjusted_prices": "Adjusted prices ON (splits/dividends where supported).",
     "missing_data": "No forward-fill. Gaps remain gaps; carry accrues over dt. Pairs use strict timestamp intersection only.",
-    "timezone": "Timestamps served as Unix ms (UTC). Note: equity aggregates are session-aligned; crypto is 24/7."
+    "timezone": "Timestamps served as Unix ms (UTC). Equity aggregates are session-aligned; crypto is 24/7."
   },
   "bars": [
     {

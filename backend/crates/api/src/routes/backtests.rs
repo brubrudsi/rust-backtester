@@ -43,7 +43,7 @@ fn default_assumptions(adjusted: bool, costs: &CostsRequest) -> Assumptions {
             "Adjusted prices OFF.".into()
         },
         missing_data: "No forward-fill. Gaps remain gaps; carry accrues over dt. Pairs use strict timestamp intersection only.".into(),
-        timezone: "Timestamps served as Unix ms (UTC). Note: equity aggregates are session-aligned; crypto is 24/7.".into(),
+        timezone: "Timestamps served as Unix ms (UTC). Equity aggregates are session-aligned; crypto is 24/7.".into(),
     }
 }
 
