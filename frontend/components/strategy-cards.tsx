@@ -20,8 +20,8 @@ const strategies: StrategyCard[] = [
     title: "A) Trend — MA Crossover",
     desc: "Classic trend-following: fast MA vs slow MA.",
     defaults: {
-      fast: 20,
-      slow: 100,
+      fast: 10,
+      slow: 40,
       sizing_mode: "fixed_notional",
       vol_lookback: 20,
       vol_target: 0.2,
