@@ -1,8 +1,5 @@
-// Centralized, dark-mode-friendly chart colors.
-//
-// Why: Recharts and TradingView Lightweight Charts default to light-theme
-// axis/tick styles. Explicitly setting colors avoids "dark on dark" issues and
-// makes the demo look consistent.
+// Shared chart color tokens.
+// Explicit axis/tick colors avoid dark-theme readability issues.
 
 export const chartTheme = {
   // Base
