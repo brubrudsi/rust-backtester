@@ -5,7 +5,7 @@ pub mod zscore_mr;
 
 /// Single-asset simulation runner used by MA crossover, z-score MR, and Donchian breakout.
 ///
-/// Hiring-signal focus:
+/// Properties:
 /// - deterministic
 /// - no lookahead (signals on close, execution next open)
 /// - costs/slippage + carry

@@ -67,20 +67,22 @@ pub async fn build_app(cfg: AppConfig) -> anyhow::Result<BuiltApp> {
     });
 
     // Rate limiting (token bucket via tower-governor).
-// We interpret cfg.rate_limit_rpm as "average requests per minute per client IP".
-// tower-governor models a quota as: burst_size tokens, refilling 1 token every `period`.
-let rpm: u64 = cfg.rate_limit_rpm.max(1) as u64;
-let period_ms: u64 = (60_000u64 / rpm).max(1); // integer ms; good enough for demo infra
-let burst_size: u32 = ((cfg.rate_limit_rpm / 10).max(10)).max(1) as u32;
+    // Interpret cfg.rate_limit_rpm as average requests per minute per client IP.
+    // tower-governor uses burst_size tokens, refilling 1 token every `period`.
+    let rpm: u64 = cfg.rate_limit_rpm.max(1) as u64;
+    let period_ms: u64 = (60_000u64 / rpm).max(1); // integer ms
+    let burst_size: u32 = ((cfg.rate_limit_rpm / 10).max(10)).max(1) as u32;
 
-let governor_conf = GovernorConfigBuilder::default()
-    .per_millisecond(period_ms)
-    .burst_size(burst_size)
-    .key_extractor(SmartIpKeyExtractor)
-    .finish()
-    .unwrap();
+    let governor_conf = GovernorConfigBuilder::default()
+        .per_millisecond(period_ms)
+        .burst_size(burst_size)
+        .key_extractor(SmartIpKeyExtractor)
+        .finish()
+        .unwrap();
 
-let governor_layer = GovernorLayer { config: Arc::new(governor_conf) };
+    let governor_layer = GovernorLayer {
+        config: Arc::new(governor_conf),
+    };
 
 
     // CORS
