@@ -129,7 +129,7 @@ export function TvCandles({
       <div className="text-sm font-semibold">{title}</div>
       <div ref={ref} className="w-full" />
       <div className="text-xs text-neutral-400">
-        Overlays are strategy indicators; markers are entries/exits. Fills occur at next bar open.
+        Fills occur at next bar open.
       </div>
     </div>
   );
