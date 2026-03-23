@@ -12,8 +12,7 @@ fn parse_timeframe(tf: &str) -> ApiResult<Timeframe> {
         "1D" => Ok(Timeframe { multiplier: 1, timespan: "day".into(), label: "1D".into() }),
         "1H" => Ok(Timeframe { multiplier: 1, timespan: "hour".into(), label: "1H".into() }),
         "1m" => Ok(Timeframe { multiplier: 1, timespan: "minute".into(), label: "1m".into() }),
-        "5m" => Ok(Timeframe { multiplier: 5, timespan: "minute".into(), label: "5m".into() }),
-        _ => Err(ApiError::bad_request("timeframe must be one of: 1D, 1H, 1m, 5m")),
+        _ => Err(ApiError::bad_request("timeframe must be one of: 1D, 1H, 1m")),
     }
 }
 
